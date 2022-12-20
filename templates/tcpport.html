@@ -1,0 +1,29 @@
+<title>TCPPORT</title>
+{% extends 'layout.html' %}
+
+{% block  content %}
+<h1>TCPPORT</h1>
+
+<a href="{{ url_for('.tcpportadd') }}"><button>Добавить запись</button></a>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li >{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+  <dl>
+    {{ render_field(form.select) }}
+    <p>
+    {{ render_field(form.search) }}
+  </dl>
+  <p><input type=submit value=Поиск>
+</form>
+{{ table }}
+{% endblock %}

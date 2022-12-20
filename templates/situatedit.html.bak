@@ -1,0 +1,16 @@
+<title>Редактирование записи - отключение оповещений</title>
+{% extends 'layout.html' %}
+
+{% block  content %}
+<h2>Редактирование</h2>
+<a href="{{ url_for('.situat') }}"><button>Отмена</button></a>
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+    <dl>
+        {{ render_field(form.SITUATION_ID) }}
+        {{ render_field(form.MSG) }}
+        {{ render_field(form.APP_LABLE) }}
+    </dl>
+    <p><input type=submit value=Редактировать>
+</form>
+{% endblock %}

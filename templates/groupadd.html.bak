@@ -1,0 +1,16 @@
+<title>Добавление записи - по группам</title>
+{% extends 'layout.html' %}
+
+{% block  content %}
+<h2>Добавление</h2>
+<a href="{{ url_for('.group') }}"><button>Отмена</button></a>
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+    <dl>
+        {{ render_field(form.NAME_GROUP) }}
+        {{ render_field(form.FLAG) }}
+        {{ render_field(form.NOTES) }}
+    </dl>
+    <p><input type=submit value=Добавить>
+</form>
+{% endblock %}

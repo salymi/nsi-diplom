@@ -1,0 +1,26 @@
+<title>Редактирование записи - Агенты мониторинга</title>
+{% extends 'layout.html' %}
+
+{% block  content %}
+<h2>Редактирование</h2>
+<a href="{{ url_for('.ftsit') }}"><button>Отмена</button></a>
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+    <dl>
+        {{ render_field(form.AGENT_NAME) }}
+		{{ render_field(form.SITUATION_ID) }}
+		{{ render_field(form.EMAIL) }}
+		{{ render_field(form.TELEPHONE) }}
+		{{ render_field(form.EMAIL_VID_ENG) }}
+		{{ render_field(form.TELEP_VID_ENG) }}
+		{{ render_field(form.DEPART) }}
+		{{ render_field(form.SERVICE_KE) }}
+		{{ render_field(form.WORGROUP) }}
+		{{ render_field(form.FLAG_GRAFANA) }}
+		{{ render_field(form.TELEGRAM) }}
+		{{ render_field(form.TELEG_VID_ENG) }}
+		{{ render_field(form.DEPART_GRAF) }}
+    </dl>
+    <p><input type=submit value=Редактировать>
+</form>
+{% endblock %}

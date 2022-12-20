@@ -1,0 +1,7 @@
+{% extends 'layout.html' %}
+
+{% block  content %}
+<title>Информация</title>
+<a href="{{ url_for('.allserv') }}"><button>Назад</button></a>
+{{ table }}
+{% endblock %}

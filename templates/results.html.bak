@@ -1,0 +1,7 @@
+{% extends 'layout.html' %}
+
+{% block  content %}
+<title>Search Results - Flask Music Database</title>
+<a href="{{ url_for('.turn') }}"><button>Назад</button></a>
+{{ table }}
+{% endblock %}

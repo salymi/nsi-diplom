@@ -1,0 +1,13 @@
+<title>Добавление записи - Все ссылки</title>
+{% extends 'layout.html' %}
+
+{% block  content %}
+<h2>Добавление</h2>
+<a href="{{ url_for('.links') }}"><button>Отмена</button></a>
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+    <dl>
+        {{ render_field(form.LINK) }}
+    <p><input type=submit value=Добавить>
+</form>
+{% endblock %}

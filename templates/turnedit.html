@@ -1,0 +1,16 @@
+<title>Редактирование записи - отключение оповещений</title>
+{% extends 'layout.html' %}
+
+{% block  content %}
+<h2>Редактирование</h2>
+<a href="{{ url_for('.turn') }}"><button>Отмена</button></a>
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+    <dl>
+        {{ render_field(form.NAME) }}
+        {{ render_field(form.IP_NODE) }}
+        {{ render_field(form.COMMENT) }}
+    </dl>
+    <p><input type=submit value=Редактировать>
+</form>
+{% endblock %}

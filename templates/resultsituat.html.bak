@@ -1,0 +1,10 @@
+{% extends 'layout.html'%} 
+{% block content %}
+<p><a href="{{ url_for('turnoffadd')}}"><button>Добавить</button></a></p>
+<ol>
+{% for u in list %}
+<li><p>Имя: {{u.NAME}}, IP: {{u.IP_NODE}}, комментарий: {{u.COMMENT}}</p></li>
+<a href="{{ url_for('turnoffchange')}}"><button>Изменить</button></a><a href="{{ url_for('turnoffadd')}}"><button>Удалить</button></a>
+{%endfor%}
+</ol>
+{% endblock %}

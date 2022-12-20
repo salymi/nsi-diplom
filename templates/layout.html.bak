@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css" href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+	<title>{{title}}</title>
+</head>
+<body>
+<ul class="mainmenu">
+<li><a href="{{ url_for('turn')}}">Отключение оповещений</a></li>
+<li><a href="{{ url_for('links')}}">Все ссылки</a></li>
+<li><a href="{{ url_for('node')}}">Все сервера</a></li>
+<li><a href="{{ url_for('situat')}}">Список ситуаций</a></li>
+<li><a href="{{ url_for('group')}}">Отключение по группам</a></li>
+<li><a href="{{ url_for('audit')}}">Агенты мониторинга</a></li>
+<li><a href="{{ url_for('ftsit')}}">Распределение ситуаций</a></li>
+<li><a href="{{ url_for('icmp')}}">ICMP</a></li>
+<li><a href="{{ url_for('tcpport')}}">TCPPORT</a></li>
+</ul>
+<div class="content">
+{% block content %}
+{% endblock %}
+</div>
+</body>
+</html>
